@@ -3,6 +3,7 @@ import Hero from "../components/hero";
 import {BackgroundLines} from "@/components/backgroundlines";
 import Body from "@/components/body";
 import {HeroHighlight} from "@/components/herohighlight";
+import {Projects} from "@/components/projects";
 
 export default function Home() {
   return (<>
@@ -16,6 +17,8 @@ export default function Home() {
       <div className="min-h-screen bg-black pt-5 h-auto">
         <Body/>
       </div>
-
+      <div className="min-h-screen bg-black pt-5 h-auto">
+        <Projects/>
+      </div>
   </>);
 }
