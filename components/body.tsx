@@ -9,18 +9,18 @@ export default function body() {
 
     return (<>
     <div className="w-full pb-3">
-        <div className="flex justify-center items-center gap-3 pl-40 pr-40">
+        <div className="flex justify-center flex-col sm:flex-row items-center gap-3 sm:pl-40 sm:pr-40 pl-0 pr-0">
             <CardContainer >
                 <CardSpotlight className=" rounded-3xl text-white h-96 1/36 bg-slate-900" > 
                     <AboutMe/> 
                 </CardSpotlight>
             </CardContainer>
-            <CardSpotlight className=" rounded-3xl text-white h-96 w-2/3">
+            <CardSpotlight className=" rounded-3xl text-white h-96 sm:w-2/3 w-full">
                 <TechStacks/>
             </CardSpotlight>
         </div>
-        <div className="flex justify-center items-center gap-x-3 pt-3 pl-40 pr-40 h-fit">
-            <CardContainer className="inter-var relative rounded-3xl min-w-fit w-1/3 border-2 border-cyan-700 h-96">
+        <div className="flex justify-center flex-col sm:flex-row items-center gap-x-3 pt-3 sm:pl-40 sm:pr-40 h-fit gap-y-2">
+            <CardContainer className="inter-var relative rounded-3xl min-w-fit sm:w-1/3 w-full border-2 border-cyan-700 h-96">
                     <Card1/>
                     <CardSpotlight2
                         animationSpeed={3}
@@ -28,7 +28,7 @@ export default function body() {
                         colors={[[125, 211, 252]]}
                     />
             </CardContainer>
-            <CardContainer className="inter-var relative rounded-3xl min-w-fit w-1/3 border-2 border-lime-700 h-96">
+            <CardContainer className="inter-var relative rounded-3xl min-w-fit sm:w-1/3 w-full border-2 border-lime-700 h-96">
                     <Card2/>
                     <CardSpotlight2
                         animationSpeed={3}
@@ -36,7 +36,7 @@ export default function body() {
                         colors={[[125, 211, 252]]}
                     />
             </CardContainer>
-            <CardContainer className="inter-var relative rounded-3xl min-w-fit w-1/3 border-2 border-orange-700 h-96">
+            <CardContainer className="inter-var relative rounded-3xl min-w-fit sm:w-1/3 w-full border-2 border-orange-700 h-96">
                     <Card3/>
                     <CardSpotlight2
                         animationSpeed={3}

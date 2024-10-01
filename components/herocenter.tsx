@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import {HoverBorderGradient} from "@/components/hoverborderbutton";
+
 
 export default function HeroCenter({ name }: { name: string }) {
     const [ShowName, setName] = useState(" ");
@@ -45,20 +47,26 @@ export default function HeroCenter({ name }: { name: string }) {
                 animation: gradient 15s ease infinite; /* Adjust duration as needed */
             }
         `}</style>
-        <div className="flex items-center flex-col justify-center h-auto sm:h-screen">
+        <div className="flex items-center flex-col justify-center h-screen">
             <h1 className="p-5 text-center hero-gradient text-5xl font-bold ">
                 {ShowName}
             </h1>
             <div className="flex items-center justify-items-center">
-                <button className="mr-6 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                <button onClick={()=> window.scrollTo({
+                        top: window.scrollY + window.innerHeight,
+                        behavior: 'smooth'
+                    })} 
+                    className="mr-6 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                         Know Me
                     </span>
                 </button>
-                <HoverBorderGradient>
-                    Contact Me
-                </HoverBorderGradient>
+                <Link href={"/contact"}>
+                    <HoverBorderGradient>
+                        Contact Me
+                    </HoverBorderGradient>
+                </Link>
             </div>
         </div>
         </>

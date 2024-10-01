@@ -107,7 +107,7 @@ export default function Hero() {
             <div className="absolute z-20">
                 {greetElements}
             </div>
-            <div className="h-screen">
+            <div className="">
                  <HeroCenter name={message} />
             </div>
         </div>

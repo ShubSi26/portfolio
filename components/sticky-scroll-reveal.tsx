@@ -62,12 +62,36 @@ export const StickyScroll = ({
 
   return (
     <motion.div
-      animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
-      ref={ref}
-    >
+        animate={{
+          backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+        }}
+        className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md sm:p-10"
+        ref={ref}
+        style={{
+          scrollbarWidth: 'thin',
+          scrollbarColor: '#555 transparent',
+        }}
+      >
+        <style jsx>{`
+          /* WebKit Browsers (Chrome, Safari, Edge) */
+          .h-[30rem]::-webkit-scrollbar {
+            width: 12px;
+          }
+
+          .h-[30rem]::-webkit-scrollbar-track {
+            background: transparent; /* Make the track transparent */
+          }
+
+          .h-[30rem]::-webkit-scrollbar-thumb {
+            background-color: #555; /* Dark grey for the scrollbar handle */
+            border-radius: 10px;
+            border: 2px solid transparent; /* Transparent border to prevent track color change */
+          }
+
+          .h-[30rem]::-webkit-scrollbar-thumb:hover {
+            background-color: #333; /* Darker on hover */
+          }
+        `}</style>
       <div className="div relative flex items-start px-2">
         <div className="max-w-2xl">
           {content.map((item, index) => (
@@ -108,6 +132,19 @@ export const StickyScroll = ({
                   )
                   ))}
               </motion.div>
+              <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: activeCard === index ? 1 : 0.3,
+              }}
+              className="block sm:hidden pt-4">
+                <div>
+                  {item.content}
+                </div>
+                  
+              </motion.div>
     
             </div>
           ))}
@@ -117,7 +154,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-auto w-auto rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden sm:block h-auto w-max rounded-md bg-white sticky top-10 z-0",
           contentClassName
         )}
       >
