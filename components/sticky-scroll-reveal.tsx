@@ -128,7 +128,7 @@ export const StickyScroll = ({
                   className="flex gap-2">
                 { item.techStack?.map((tech) => (
                   (
-                    <motion.img src={"https://skillicons.dev/icons?i=" + tech} alt={tech} />
+                    <motion.img key={tech} src={"https://skillicons.dev/icons?i=" + tech} alt={tech} />
                   )
                   ))}
               </motion.div>

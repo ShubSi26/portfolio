@@ -8,12 +8,12 @@ export function Footr() {
   return (
     <div className="h-auto flex justify-center items-center flex-col">
       <div className="text-4xl justify-center items-center flex-col font-normal text-white dark:text-neutral-400 overflow-hidden pb-5">
-        <div>Let's </div>
+        <div>Let&apos;s </div>
         <FlipWords words={words} duration={1000}/>
         <div>Together</div>
       </div>
       <div className="text-white text-2xl text-center font-normal w-2/3 p-2">
-        I'm always excited to collaborate on new projects. Feel free to reach out if you have any questions or want to chat!
+        I&apos;m always excited to collaborate on new projects. Feel free to reach out if you have any questions or want to chat!
       </div>
         <Link href={"/contact"}>
           <HoverBorderGradient>

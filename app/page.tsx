@@ -1,3 +1,4 @@
+
 import Hero from "../components/hero";
 import {BackgroundLines} from "@/components/backgroundlines";
 import Body from "@/components/body";

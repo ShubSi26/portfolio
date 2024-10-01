@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
+import { useMotionValue, motion } from "framer-motion";
 import React, {MouseEvent as ReactMouseEvent, useMemo, useRef,useState } from "react";
 import * as THREE from "three";
 
@@ -28,7 +28,7 @@ export const CardSpotlight2 = ({
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
