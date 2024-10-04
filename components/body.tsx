@@ -57,7 +57,7 @@ function AboutMe(){
                 WhoAmI
             </Button>
             <p>
-                Hi, I’m Shubham Singh, a MERN stack developer from India with a strong focus on building efficient and scalable web applications. I work with React, Node.js, Express, and MongoDB to create seamless user experiences. I enjoy solving complex problems and continuously explore new technologies to stay updated. Along with coding, I focus on improving UI/UX design to deliver optimized, modern web solutions.
+                Hi, I’m Shubham Singh, a MERN stack developer and student from India with a strong focus on building efficient and scalable web applications. I work with React, Node.js, Express, and MongoDB to create seamless user experiences. I enjoy solving complex problems and continuously explore new technologies to stay updated. Along with coding, I focus on improving UI/UX design to deliver optimized, modern web solutions.
             </p>
         </div>
     )

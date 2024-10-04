@@ -1,7 +1,8 @@
-"use client";
-import React from "react";
+
 import { StickyScroll } from "@/components/sticky-scroll-reveal";
 import Image from "next/image";
+import Link from "next/link";
+import Show from "@/components/show"; 
 
 const content = [
   {
@@ -18,16 +19,24 @@ const content = [
           priority = {true}
         />
         <div className="hidden absolute inset-0 z-10 text-black justify-center items-center sm:flex group gap-5">
+          <Link href = "https://github.com/ShubSi26/Pay-Now" target="_blank">
             <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
                 <Show src={"/images/github.png"} text="Source Code"/>
             </div>
+          </Link>
+          <Link href={"https://project-paynow.onrender.com/Transaction"} target="_blank">
             <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
                 <Show src={"/images/web.png"} text="Live Demo"/>
             </div>
+          </Link>
         </div>
         <div className="sm:hidden z-50 text-black gap-3 flex-row flex pt-2">
-          <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
-          <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
+          <Link href = "https://github.com/ShubSi26/Pay-Now" target="_blank">
+            <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
+          </Link>
+          <Link href={"https://project-paynow.onrender.com/Transaction"} target="_blank">
+            <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
+          </Link>
         </div>
       </div>
     ),
@@ -64,16 +73,24 @@ const content = [
             priority = {true}
           />
           <div className="hidden absolute inset-0 z-10 text-black justify-center items-center sm:flex group gap-5">
-            <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
-                <Show src={"/images/github.png"} text="Source Code"/>
-            </div>
-            <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
-                <Show src={"/images/web.png"} text="Live Demo"/>
-            </div>
+            <Link href = "https://github.com/ShubSi26/Crowdfunding" target="_blank">
+              <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
+                  <Show src={"/images/github.png"} text="Source Code"/>
+              </div>
+            </Link>
+            <Link href="https://project-crowdfund.onrender.com" target="_blank">
+              <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
+                  <Show src={"/images/web.png"} text="Live Demo"/>
+              </div>
+            </Link>
           </div>
           <div className="sm:hidden z-50 text-black gap-3 flex-row flex pt-2">
-            <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
-            <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
+            <Link href = "https://github.com/ShubSi26/Crowdfunding" target="_blank">
+              <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
+            </Link>
+            <Link href="https://project-crowdfund.onrender.com" target="_blank">
+              <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
+            </Link>
           </div>
         </div>
       ),
@@ -93,12 +110,16 @@ const content = [
             priority = {true}
           />
           <div className="hidden absolute inset-0 z-10 text-black justify-center items-center sm:flex group gap-5">
-            <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
-                <Show src={"/images/github.png"} text="Source Code"/>
-            </div>
+            <Link href={"https://github.com/ShubSi26/AYUSH-Startup-Portal"} target="_blank">
+              <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
+                  <Show src={"/images/github.png"} text="Source Code"/>
+              </div>
+            </Link>
           </div>
           <div className="sm:hidden z-50 text-black gap-3 flex-row flex pt-2">
-            <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
+            <Link href={"https://github.com/ShubSi26/AYUSH-Startup-Portal"} target="_blank">
+              <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
+            </Link>
           </div>
         </div>
       ),
@@ -117,28 +138,3 @@ export function Projects() {
   </>);
 }
 
-
-function Show({src,text,className}:{src:string,text:string,className?:string}) {
-    const [show, setShow] = React.useState(false);
-  
-    return (
-      <div
-        className={"flex items-center " + className}
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-      >
-        <Image
-          src={src}
-          width={30}
-          height={30}
-          className=""
-          alt="github"
-        />
-        <div
-          className={`whitespace-nowrap transition-all duration-1000 ease-in-out overflow-hidden ${show ? 'max-w-xs opacity-100' : 'max-w-0 h-0 opacity-0'}`}
-        >
-          {text}
-        </div>
-      </div>
-    );
-  }

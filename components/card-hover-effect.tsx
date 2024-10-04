@@ -31,6 +31,7 @@ export const HoverEffect = ({
           className="relative group  block p-2 h-full w-full "
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          target="_blank"
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
