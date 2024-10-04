@@ -17,17 +17,13 @@ export default function Contact() {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
-
-    // Attach mousemove event listener
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Clean up event listener on unmount
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-  // Function to copy email to clipboard
   const copyEmail = () => {
     navigator.clipboard.writeText("shubhamsi160@gmail.com");
     alert("Email copied to clipboard!");
