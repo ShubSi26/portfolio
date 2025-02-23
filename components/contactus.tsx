@@ -29,13 +29,15 @@ const MyComponent = () => {
                 <Turnstile
                   sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
                   onVerify={(token) => {
+                    console.log(token);
                     fetch("/api/verify-captcha", {
                       method: "POST",
-                      body: JSON.stringify({ token }),
+                      body: JSON.stringify({ token:token }),
                     }).then((response:any) => {
                       if (!response.ok) turnstile.reset();
-  
-                      setEmail(response.JSON().email);
+                     response.json().then((data:any) => {
+                        setEmail(data.email);
+                      });
                     }).catch(() => {
                       turnstile.reset();
                     });

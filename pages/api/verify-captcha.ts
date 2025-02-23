@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-    const { token } = req.body;
+    const { token } = JSON.parse(req.body);
     const secretKey = process.env.SECRET_KEY as string;
   
     const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
@@ -9,6 +9,10 @@ export default async function handler(req, res) {
     });
   
     const data = await response.json();
-    res.json({ success: data.success, email:"shubhamsi160@gmail.com" });
+    if(data.success) {
+      res.status(200).json({ email: "shubhamsi160@gmail.com" });
+    } else {
+        res.status(400).json({ error: "Invalid Captcha" });
+    }
   }
   
