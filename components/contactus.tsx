@@ -3,13 +3,17 @@
 import { useState } from "react";
 import Turnstile, { useTurnstile } from "react-turnstile"; // A wrapper for Cloudflare Turnstile
 import Image from "next/image";
+import Link from "next/link";
 
 const MyComponent = () => {
   const turnstile = useTurnstile();
   const [email,setEmail] = useState("");
-  console.log(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY);
+
   return (
-    <div className=" w-screen h-screen flex justify-center items-center gap-4">
+    <div className=" w-screen h-screen flex flex-col justify-center items-center gap-4">
+      <div className="text-4xl font-bold">Lets Connect</div>
+        <div className="flex flex-wrap justify-center items-center gap-4">
+        <Link href={"https://www.linkedin.com/in/shubh001"}>
             <div className="flex flex-col items-center">
               <Image
                 src="/images/linkedins.png"
@@ -20,6 +24,8 @@ const MyComponent = () => {
               />
               <div className="font-bold">Connect On Linkedin</div>
             </div>
+            </Link>
+            <div className="flex flex-col items-center">
                 <Turnstile
                   sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
                   onVerify={(token) => {
@@ -35,8 +41,10 @@ const MyComponent = () => {
                   }}
                 />
                 <div>
-                  {email} 
+                  {email === "" ? "Verify Captcha" : `Email: ${email}`}
                 </div>
+              </div>
+          </div>
     </div>
     );
 };
