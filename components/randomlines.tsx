@@ -25,13 +25,14 @@ const MovingLinesBackground = () => {
       color: string;
     };
 
-    let lines: Line[] = [];
+    const lines: Line[] = [];
 
     function createLine(): Line {
+      if (!canvas) return {} as Line; // Add this null check
+
       // Choose a random edge: 0 = top, 1 = right, 2 = bottom, 3 = left
       const edge = Math.floor(Math.random() * 4);
       let start, target;
-
       switch (edge) {
         case 0: // Top edge: go vertically downward
           start = { x: Math.random() * canvas.width, y: 0 };
@@ -67,6 +68,8 @@ const MovingLinesBackground = () => {
     }
 
     function updateLines() {
+      if (!canvas) return;
+      if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw each line
@@ -131,7 +134,10 @@ const MovingLinesBackground = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full -z-40 dark:bg-slate-800 hidden sm:block" />;
+  return (<>
+  <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full -z-40 dark:bg-slate-800 hidden sm:block" />
+  <div className="fixed top-0 left-0 w-full h-full -z-40 dark:bg-slate-800 sm:hidden"></div>
+</>);
 };
 
 export default MovingLinesBackground;

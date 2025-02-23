@@ -1,10 +1,9 @@
 'use client';
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { useState } from "react";
 
 
-export default function body(){
+export default function Body(){
     const [flag,setflag] = useState(true);
     return(
         <motion.div 
@@ -19,11 +18,10 @@ export default function body(){
                     About Me
                 </h1>
                 <div className="backdrop-blur-lg bg-white/50 text-slate-700 text-xl dark:bg-slate-800 dark:text-slate-100 text-justify">
-                I'm a passionate Software Developer with experience in the MERN stack, Docker, Kubernetes, Linux, Cloud (Azure, AWS), and DevOps. Currently in my third year of B.Tech in Computer Science and Engineering, I build and deploy scalable applications while continuously learning new technologies.
-
-I've developed projects like Pay Now (a digital payment app) and Connectify (a web chat platform), leveraging Docker for containerization and Azure/AWS for deployment. My strong background in C++, Python, JavaScript, TypeScript, and Kotlin complements my problem-solving skills—I hold a 3-star rating on CodeChef, a 1,640+ rating on LeetCode, and have solved over 500 coding problems.
-
-I'm actively seeking opportunities in Software Development, Full-Stack, Frontend, Backend, and DevOps roles. Let’s connect and build something amazing together!
+                    I&apos;m a passionate Software Developer with experience in the MERN stack, Docker, Kubernetes, Linux, Cloud (Azure, AWS), and DevOps. Currently in my third year of B.Tech in Computer Science and Engineering, I focus on building scalable applications while continuously learning new technologies. I have a strong background in C++, Python, JavaScript, TypeScript, and Kotlin, along with problem-solving skills—holding a 3-star rating on CodeChef, a 1,640+ rating on LeetCode, and over 500 solved coding problems. 
+                </div>
+                <div className="text-center backdrop-blur-lg bg-white/50 text-slate-700 text-xl dark:bg-slate-800 dark:text-slate-100">
+                    I&apos;m actively seeking opportunities in Software Development, Full-Stack, Backend, and DevOps roles. Let&apos;s connect!
                 </div>
             </div>
             <div className="sm:px-32 mt-5 flex fles-row">

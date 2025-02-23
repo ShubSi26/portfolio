@@ -65,14 +65,3 @@ export const projects = [
     link: "https://www.hackerrank.com/profile/realshubham",
   },
 ];
-
-
-function Button({title,link}:{title:string,link:string}){
-  return(
-    <Link href={link} target="_blank">
-      <button key={title} className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-white dark:text-white rounded-xl font-bold transform hover:-translate-y-1 transition duration-400 text-white">
-        {title}
-      </button>
-    </Link>
-  )
-}

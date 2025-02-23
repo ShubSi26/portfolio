@@ -1,5 +1,4 @@
 "use client"
-import {Switch} from "@heroui/switch";
 import { useEffect, useState } from "react";
 
 export const MoonIcon = (props) => {

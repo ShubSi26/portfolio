@@ -35,7 +35,7 @@ function Text() {
         transition={{ delay: 0.5, duration: 1.5 }}
         className="text-center mt-10"
       >
-        <h1 className="text-4xl font-bold whitespace-nowrap  text-left bg-white dark:bg-slate-800">👋Hello, I'm</h1>
+        <h1 className="text-4xl font-bold whitespace-nowrap  text-left bg-white dark:bg-slate-800">👋Hello, I&apos;m</h1>
         <h1 className="text-4xl font-bold whitespace-nowrap text-left bg-white dark:bg-slate-800"> Shubham Singh</h1>
         <h2 className="text-2xl font-medium whitespace-nowrap text-left bg-white dark:bg-slate-800">Web & Android Developer</h2>
       </motion.div>
@@ -73,7 +73,7 @@ function Links({handleScroll,handleScroll2} : {handleScroll:()=>void,handleScrol
 export default function Hero({handleScroll,handleScroll2} : {handleScroll:()=>void, handleScroll2:()=>void}){
 
     return (
-        <div className=" h-screen w-screen flex flex-col justify-center items-center ">
+        <div className="h-screen w-screen flex flex-col justify-center items-center ">
             <div className="flex sm:flex-row flex-col-reverse items-center justify-center gap-3">
                 <Text/>
                 <Profile_Image/>

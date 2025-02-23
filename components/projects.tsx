@@ -7,6 +7,43 @@ import { motion } from "framer-motion";
 
 const content = [
   {
+    title: "Connectify",
+    description: "Connectify is a real-time WebRTC chat platform that enables seamless communication, supporting peer to peer video chat. Built with the MERN stack, it ensures a responsive and interactive user experience. ",
+    content: (
+      <div className="h-full w-full flex flex-col items-center justify-center ">
+        <Image
+          src="https://raw.githubusercontent.com/ShubSi26/connectify/main/images/homepage.jpg"
+          width={600}
+          height={500}
+          className="h-full w-full object-cover pointer-events-none"
+          alt="Pay Now demo"
+          priority = {true}
+        />
+        <div className="hidden absolute inset-0 z-10 text-black justify-center items-center sm:flex group gap-5">
+          <Link href = "https://github.com/ShubSi26/connectify" target="_blank">
+            <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
+                <Show src={"/images/github.png"} text="Source Code"/>
+            </div>
+          </Link>
+          <Link href={"https://connectify.devshubh.live"} target="_blank">
+            <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
+                <Show src={"/images/web.png"} text="Live Demo"/>
+            </div>
+          </Link>
+        </div>
+        <div className="sm:hidden z-50 text-black gap-3 flex-row flex pt-2">
+          <Link href = "https://github.com/ShubSi26/connectify" target="_blank">
+            <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
+          </Link>
+          <Link href={"https://connectify.devshubh.live"} target="_blank">
+            <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
+          </Link>
+        </div>
+      </div>
+    ),
+    techStack: ["react", "nodejs", "express", "mongodb", "docker", "cloudflare"],
+  },
+  {
     title: "Pay Now",
     description: "Pay Now is an Open Source Project for Real-Time Payment Application Using the MERN Stack. It allows users to manage wallet balances, make payments via cash, and track transactions in real-time.",
     content: (
@@ -25,7 +62,7 @@ const content = [
                 <Show src={"/images/github.png"} text="Source Code"/>
             </div>
           </Link>
-          <Link href={"https://project-paynow.onrender.com/Transaction"} target="_blank">
+          <Link href={"https://paynow.devshubh.live"} target="_blank">
             <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
                 <Show src={"/images/web.png"} text="Live Demo"/>
             </div>
@@ -35,7 +72,7 @@ const content = [
           <Link href = "https://github.com/ShubSi26/Pay-Now" target="_blank">
             <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
           </Link>
-          <Link href={"https://project-paynow.onrender.com/Transaction"} target="_blank">
+          <Link href={"https://paynow.devshubh.live"} target="_blank">
             <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
           </Link>
         </div>

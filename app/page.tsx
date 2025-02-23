@@ -6,6 +6,7 @@ import {CardHoverEffectDemo} from "@/components/findme";
 import {Footr} from "@/components/footr";
 import Randomlines from "@/components/randomlines";
 import { useRef } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -21,6 +22,10 @@ export default function Home() {
     }
   };
   return (<>
+      <Head>
+        <title>Welcome</title>
+        <meta name="description" content="Hello, this is portfolio of Shubham Singh, a passionate Software Developer with experience in the MERN stack, Docker, Kubernetes, Linux, Cloud (Azure, AWS), and DevOps. Currently in my third year of B.Tech in Computer Science and Engineering, I focus on building scalable applications while continuously learning new technologies. I have a strong background in C++, Python, JavaScript, TypeScript, and Kotlin, along with problem-solving skills—holding a 3-star rating on CodeChef, a 1,640+ rating on LeetCode, and over 500 solved coding problems. " />
+      </Head>
         <Randomlines/>
         <div className="w-screen no-scrollbar ">
               <Hero handleScroll = {handleScroll} handleScroll2={handleScroll2}/>
