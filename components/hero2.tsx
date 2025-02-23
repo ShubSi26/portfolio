@@ -19,8 +19,8 @@ function Profile_Image() {
                 <Image
                     src="/images/dp.jpg"
                     alt="Shubham Singh"
-                    fill
-                    className="object-cover border-2  border-b-gray-700"
+                    fill 
+                    className="object-coveer"
                 />
             </div>
         </div>
