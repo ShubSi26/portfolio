@@ -34,6 +34,7 @@ const MyComponent = () => {
                       body: JSON.stringify({ token }),
                     }).then((response:any) => {
                       if (!response.ok) turnstile.reset();
+                      console.log(response);
                       setEmail(response.data.email);
                     }).catch(() => {
                       turnstile.reset();
