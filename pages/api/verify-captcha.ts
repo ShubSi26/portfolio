@@ -1,5 +1,7 @@
 export default async function handler(req, res) {
+    console.log(req.body);
     const { token } = JSON.parse(req.body);
+    console.log(token);
     const secretKey = process.env.SECRET_KEY as string;
   
     const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
