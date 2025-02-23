@@ -1,15 +1,16 @@
-
+"use client"
 import { StickyScroll } from "@/components/sticky-scroll-reveal";
 import Image from "next/image";
 import Link from "next/link";
 import Show from "@/components/show"; 
+import { motion } from "framer-motion";
 
 const content = [
   {
     title: "Pay Now",
     description: "Pay Now is an Open Source Project for Real-Time Payment Application Using the MERN Stack. It allows users to manage wallet balances, make payments via cash, and track transactions in real-time.",
     content: (
-      <div className="h-full w-full flex flex-col items-center justify-center text-white ">
+      <div className="h-full w-full flex flex-col items-center justify-center ">
         <Image
           src="https://raw.githubusercontent.com/ShubSi26/Pay-Now/refs/heads/main/images/default.jpg"
           width={600}
@@ -129,12 +130,17 @@ const content = [
 export function Projects() {
   return (<>
   
-    <div>
-        <h1 className="text-white text-center text-3xl">My Projects</h1>
+    <div className="transition-all sm:px-32 px-4 pb-4">
+        <h1 className=" text-left font-bold text-4xl">My Projects</h1>
     </div>
-    <div className="p-10 scroll-container">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="p-10 scroll-container">
       <StickyScroll content={content} />
-    </div>
+    </motion.div>
   </>);
 }
 

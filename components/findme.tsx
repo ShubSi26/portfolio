@@ -4,13 +4,16 @@ import Link from "next/link";
 export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
-        <h1 className="text-white text-3xl"> Find Me At -</h1>
+        <h1 className="text-4xl font-bold"> Find Me At -</h1>
         <HoverEffect items={projects} className="hidden sm:grid"/>
-        <div className="flex flex-wrap text-white justify-center items-center gap-3 sm:hidden py-4">
-          {projects.map((item, idx) => {
+        <div className="flex flex-wrap text-black justify-center items-center gap-3 sm:hidden py-4">
+        {projects.map((item, idx) => {
             return (
-              <div key={idx}>
-                <Button title={item.title} link={item.link} />
+              <div key={idx} className="text-xl font-bold dark:text-white"
+              >
+                <Link href={item.link} target="_blank">
+                {item.title}
+                </Link>
               </div>
             )
           })}
