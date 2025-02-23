@@ -9,6 +9,7 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ secret: secretKey, response: token }),
     });
+    console.log(response);
   
     const data = await response.json();
     if(data.success) {
