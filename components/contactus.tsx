@@ -11,7 +11,7 @@ const MyComponent = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center gap-4">
-      <div className="text-4xl font-bold">Let's Connect</div>
+      <div className="text-4xl font-bold">Let&apos;s Connect</div>
       <div className="flex flex-wrap justify-center items-center gap-4">
         <Link href="https://www.linkedin.com/in/shubh001">
           <div className="flex flex-col items-center cursor-pointer">
