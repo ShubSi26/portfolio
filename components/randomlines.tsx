@@ -28,33 +28,21 @@ const MovingLinesBackground = () => {
     const lines: Line[] = [];
 
     function createLine(): Line {
-      if (!canvas) return {} as Line; // Add this null check
-
-      // Choose a random edge: 0 = top, 1 = right, 2 = bottom, 3 = left
-      const edge = Math.floor(Math.random() * 4);
-      let start, target;
-      switch (edge) {
-        case 0: // Top edge: go vertically downward
-          start = { x: Math.random() * canvas.width, y: 0 };
-          target = { x: start.x, y: canvas.height };
-          break;
-        case 1: // Right edge: go horizontally leftward
-          start = { x: canvas.width, y: Math.random() * canvas.height };
-          target = { x: 0, y: start.y };
-          break;
-        case 2: // Bottom edge: go vertically upward
-          start = { x: Math.random() * canvas.width, y: canvas.height };
-          target = { x: start.x, y: 0 };
-          break;
-        case 3: // Left edge: go horizontally rightward
-          start = { x: 0, y: Math.random() * canvas.height };
-          target = { x: canvas.width, y: start.y };
-          break;
-        default:
-          start = { x: 0, y: 0 };
-          target = { x: canvas.width, y: canvas.height };
-      }
-
+      if (!canvas) return {} as Line; // Safety check
+    
+      // Random x position across the canvas width
+      const x = Math.random() * canvas.width;
+    
+      // Randomly decide whether the line goes downward or upward
+      const goDownward = Math.random() < 0.5;
+    
+      const start = goDownward 
+        ? { x, y: 0 } 
+        : { x, y: canvas.height };
+      const target = goDownward 
+        ? { x, y: canvas.height } 
+        : { x, y: 0 };
+    
       return {
         x1: start.x,
         y1: start.y,
@@ -62,10 +50,11 @@ const MovingLinesBackground = () => {
         targetY: target.y,
         progress: 0,         // Drawing progress (0 to 1)
         speed: 0.005,        // Speed of drawing the line
-        tailSpeed: 0.002,    // Speed of erasing the line from the start
+        tailSpeed: 0.005,    // Speed of erasing the line from the start
         color: `hsl(${Math.random() * 360}, 100%, 70%)`,
       };
     }
+    
 
     function updateLines() {
       if (!canvas) return;

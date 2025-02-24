@@ -61,6 +61,10 @@ const MyComponent = () => {
         </p>
 
       </Link>
+      <p className="text-2xl text-gray-800 font-roboto text-center">
+          Feedback and suggestions are the foundation of my continuous improvement. 
+            I&apos;m always eager to hear from you!
+          </p>
     </div>
   );
 };

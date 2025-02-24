@@ -4,7 +4,7 @@ import Link from "next/link";
 export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
-        <h1 className="text-4xl font-bold"> Find Me At -</h1>
+        <h1 className="text-4xl font-bold text-center sm:text-left"> Find Me At -</h1>
         <HoverEffect items={projects} className="hidden sm:grid"/>
         <div className="flex flex-wrap text-black justify-center items-center gap-3 sm:hidden py-4">
         {projects.map((item, idx) => {

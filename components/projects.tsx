@@ -168,7 +168,7 @@ export function Projects() {
   return (<>
   
     <div className="transition-all sm:px-32 px-4 pb-4">
-        <h1 className=" text-left font-bold text-4xl">My Projects</h1>
+        <h1 className=" sm:text-left font-bold text-4xl text-center">My Projects</h1>
     </div>
     <motion.div 
       initial={{ opacity: 0, y: 20 }}

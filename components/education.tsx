@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Education(){
 
     return(<>
-        <div className="sm:px-72 p-5 font-bold text-4xl">
+        <div className="sm:px-72 p-5 font-bold text-4xl text-center sm:text-left">
             Education
         </div>
         <div className="flex flex-row sm:gap-5 justify-center items-center p-2">
