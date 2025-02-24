@@ -1,41 +1,41 @@
-// pages/api/verify-captcha.ts
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
-import type { NextApiRequest, NextApiResponse } from "next";
+  const SECRET_KEY = process.env.TURNSTILE_SECRET_KEY as string;
+  const email = process.env.EMAIL as string;
+  const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
-type Data = { email?: string; error?: string };
+  const [token] = JSON.parse(req.body);
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+  if (!token) {
+    return res.status(400).json({ error: 'Missing token' });
+  }
+
   try {
-    // If the body is already parsed as JSON, you can directly destructure it.
-    const { token } = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
-    console.log("Received token:", token);
+    const idempotencyKey = crypto.randomUUID();
 
-    const secretKey = process.env.SECRET_KEY as string;
-    if (!secretKey) {
-      return res.status(500).json({ error: "Server configuration error" });
-    }
-
-    // Access the connecting IP correctly
-    const ip = req.headers["cf-connecting-ip"];
-
-    const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip }),
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        secret: SECRET_KEY,
+        response: token,
+        remoteip: ip,
+        idempotency_key: idempotencyKey,
+      }),
     });
 
-    console.log("Cloudflare response:", response);
-
     const data = await response.json();
-    console.log("Verification result:", data);
 
     if (data.success) {
-      res.status(200).json({ email: "shubhamsi160@gmail.com" });
+      return res.status(200).json({ success: true, message: 'Verification successful', email: email });
     } else {
-      res.status(400).json({ error: "Invalid Captcha" });
+      return res.status(400).json({ success: false, message: 'Verification failed', error: data });
     }
-  } catch (error) {
-    console.error("Error in captcha verification:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+  } catch (error:any) {
+    return res.status(500).json({ success: false, message: 'Internal Server Error', error: error.message });
   }
 }
