@@ -1,6 +1,7 @@
 "use client"
 import Hero from "../components/hero2";
 import Body from "@/components/body2";
+import Education from "@/components/education";
 import {Projects} from "@/components/projects";
 import {CardHoverEffectDemo} from "@/components/findme";
 import {Footr} from "@/components/footr";
@@ -35,6 +36,9 @@ export default function Home() {
         </div>
         <div ref={targetRef2} className="min-h-fit transition-all duration-500 ease-in-out  pt-5 h-auto">
           <Projects/>
+        </div>
+        <div>
+          <Education/>
         </div>
         <div className="">
           <CardHoverEffectDemo/>

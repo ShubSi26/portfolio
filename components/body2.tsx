@@ -37,30 +37,29 @@ function TechStack(){
     return(
         <div className="sm:px-32 mt-5 transition-all duration-500 ease-in-out">
             <div className="mt-10 sm:flex sm:justify-evenly sm:flex-wrap grid grid-cols-3 text-slate-700 text-xl sm:gap-8 gap-3">
-                <Icons src="js" text="JavaScript"/>
-                <Icons src="ts" text="TypeScript"/>
-                <Icons src="tailwind" text="TailwindCSS"/>
-                <Icons src="next" text="Next.js"/>
-                <Icons src="react" text="React"/>
-                <Icons src="express" text="Express.js"/>
-                <Icons src="nodejs" text="NodeJS"/>
-                <Icons src="mongodb" text="MongoDB"/>
-                <Icons src="docker" text="Docker"/>
-                <Icons src="kubernetes" text="Kubernetes"/>
-                <Icons src="linux" text="Linux"/>
-                <Icons src="azure" text="Azure"/>
-                <Icons src="aws" text="AWS"/>
-                <Icons src="cpp" text="C++"/>
-                <Icons src="c" text="C"/>
-                <Icons src="kotlin" text="Kotlin"/>
-                <Icons src="python" text="Python"/>
-                <Icons src="postgresql" text="PostgreSQL"/>
-                <Icons src="prisma" text="Prisma"/>
-                <Icons src="figma" text="Figma"/>
-                <Icons src="html" text="HTML"/>
-                <Icons src="css" text="CSS"/>
-                <Icons src="bootstrap" text="Bootstrap"/>
-                
+            <Icons src="aws" text="AWS"/>
+            <Icons src="azure" text="Azure"/>
+            <Icons src="bootstrap" text="Bootstrap"/>
+            <Icons src="c" text="C"/>
+            <Icons src="cpp" text="C++"/>
+            <Icons src="css" text="CSS"/>
+            <Icons src="docker" text="Docker"/>
+            <Icons src="express" text="Express.js"/>
+            <Icons src="figma" text="Figma"/>
+            <Icons src="html" text="HTML"/>
+            <Icons src="js" text="JavaScript"/>
+            <Icons src="kotlin" text="Kotlin"/>
+            <Icons src="kubernetes" text="Kubernetes"/>
+            <Icons src="linux" text="Linux"/>
+            <Icons src="mongodb" text="MongoDB"/>
+            <Icons src="next" text="Next.js"/>
+            <Icons src="nodejs" text="NodeJS"/>
+            <Icons src="postgresql" text="PostgreSQL"/>
+            <Icons src="prisma" text="Prisma"/>
+            <Icons src="python" text="Python"/>
+            <Icons src="react" text="React"/>
+            <Icons src="tailwind" text="TailwindCSS"/>
+            <Icons src="ts" text="TypeScript"/>
             </div>
         </div>
     )
@@ -70,12 +69,13 @@ function Tools(){
     return(
         <div className="sm:px-32 mt-5 transition-all duration-500 ease-in-out">
             <div className="mt-10 sm:flex sm:justify-evenly sm:flex-wrap grid grid-cols-3 text-slate-700 text-xl sm:gap-8 gap-3">
-                <Icons src="vscode" text="VS Code"/>
-                <Icons src="git" text="Git"/>
-                <Icons src="github" text="GitHub"/>
-                <Icons src="discord" text="Discord"/>
-                <Icons src="postman" text="Postman"/>
-                <Icons src="androidstudio" text="Android Studio"/>
+            <Icons src="androidstudio" text="Android Studio"/>
+            <Icons src="discord" text="Discord"/>
+            <Icons src="git" text="Git"/>
+            <Icons src="github" text="GitHub"/>
+            <Icons src="postman" text="Postman"/>
+            <Icons src="vscode" text="VS Code"/>
+
             </div>
         </div>
     )
