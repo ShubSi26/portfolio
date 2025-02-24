@@ -10,7 +10,7 @@ const MyComponent = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center gap-4">
+    <div className="w-screen h-screen dark:bg-slate-800 flex flex-col justify-center items-center gap-4">
       <div className="text-4xl font-bold">Let&apos;s Connect</div>
       <div className="flex flex-wrap justify-center flex-col sm:flex-row items-center gap-4">
         <Link href="https://www.linkedin.com/in/shubh001">
