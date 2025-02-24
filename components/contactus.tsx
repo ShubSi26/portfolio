@@ -12,7 +12,7 @@ const MyComponent = () => {
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center gap-4">
       <div className="text-4xl font-bold">Let&apos;s Connect</div>
-      <div className="flex flex-wrap justify-center items-center gap-4">
+      <div className="flex flex-wrap justify-center flex-col sm:flex-row items-center gap-4">
         <Link href="https://www.linkedin.com/in/shubh001">
           <div className="flex flex-col items-center cursor-pointer">
             <Image
@@ -61,7 +61,7 @@ const MyComponent = () => {
         </p>
 
       </Link>
-      <p className="text-2xl text-gray-800 font-roboto text-center">
+      <p className="text-2xl text-gray-800 font-roboto text-center dark:text-slate-200">
           Feedback and suggestions are the foundation of my continuous improvement. 
             I&apos;m always eager to hear from you!
           </p>
