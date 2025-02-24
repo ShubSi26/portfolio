@@ -28,7 +28,6 @@ const MyComponent = () => {
           <Turnstile
             sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
             onVerify={(token: string) => {
-              console.log("Turnstile token:", token);
               fetch("/api/verify-captcha", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
