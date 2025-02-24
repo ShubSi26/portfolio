@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const email = process.env.EMAIL as string;
   const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
-  const [token] = JSON.parse(req.body);
+  const token = req.body.token;
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
   if (!token) {
