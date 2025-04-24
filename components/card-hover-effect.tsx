@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 h-full",
         className
       )}
     >
@@ -36,7 +36,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-slate-600 dark:bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-slate-600 border-2 border-white dark:bg-slate-800/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full  overflow-hidden bg-white border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 border-blue-900 border-2 ",
+        "rounded-2xl h-max w-full  overflow-hidden bg-white border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 border-blue-900 border-2 ",
         className
       )}
     >

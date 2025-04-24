@@ -136,7 +136,7 @@ const content = [
   },
   {
     title: "AYUSH-Startup-Portal",
-    description:"This project involves creating a comprehensive AYUSH Startup Registration Portal designed to simplify and expedite the registration process for AYUSH startups. The portal will provide a user-friendly, secure, and scalable solution to manage a high volume of registrations.",
+    description:"This project involves creating a comprehensive AYUSH Startup Registration Portal designed to simplify the registration process for AYUSH startups. The portal will provide a user-friendly, secure, and scalable solution to manage a high volume of registrations.",
       content: (
         <div className="h-full w-full flex flex-col items-center justify-center text-white ">
           <Image
@@ -170,6 +170,14 @@ export function Projects() {
     <div className="transition-all sm:px-32 px-4 pb-4">
         <h1 className=" sm:text-left font-bold text-4xl text-center">My Projects</h1>
     </div>
+    
+    <Link href={"/projects"}>
+      <div className="sm:px-32 px-4 pb-4 flex justify-center items-center">
+        <h1 className=" sm:text-left font-bold text-2xl text-center">See All Projects</h1>
+      </div>
+    </Link>
+
+    
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

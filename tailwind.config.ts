@@ -56,6 +56,14 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -63,6 +71,7 @@ const config = {
         scroll:"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         'spin-slow': 'spin 6s linear infinite',
         'spin-slow-reverse': 'spin 12s linear infinite',
+        aurora: "aurora 60s linear infinite",
       },
       backgroundImage: {
         'gradient-conic': 'conic-gradient(from 0deg, #3b82f6, #ffffff, #3b82f6)', // Blue to White gradient

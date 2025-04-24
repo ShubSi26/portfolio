@@ -6,7 +6,7 @@ export const MoonIcon = (props) => {
     <svg
       aria-hidden="true"
       focusable="false"
-      height="1em"
+      height="2em"
       role="presentation"
       viewBox="0 0 24 24"
       className="w-9"
@@ -25,7 +25,7 @@ export const SunIcon = (props) => {
     <svg
       aria-hidden="true"
       focusable="false"
-      height="1em"
+      height="2em"
       role="presentation"
       viewBox="0 0 24 24"
       className="w-9"
@@ -40,7 +40,7 @@ export const SunIcon = (props) => {
 };
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     if (darkMode) {
@@ -52,7 +52,7 @@ export default function App() {
 
 
   return (
-    <div className="cursor-pointer" onClick={() => setDarkMode(e=>!e)}>
+    <div className="cursor-pointer " onClick={() => setDarkMode(e=>!e)}>
       {darkMode ? <MoonIcon /> : <SunIcon />}
     </div>
     

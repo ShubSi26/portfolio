@@ -12,6 +12,7 @@
     "@heroui/switch": "^2.2.12",
     "@heroui/system": "^2.4.10",
     "@heroui/theme": "^2.4.9",
+    "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^8.17.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -31,7 +32,8 @@
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.169.0"
+    "three": "^0.169.0",
+    "three-globe": "^2.42.4"
   },
   "devDependencies": {
     "@types/node": "^20",

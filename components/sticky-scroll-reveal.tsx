@@ -63,7 +63,7 @@ export const StickyScroll = ({
         animate={{
           backgroundColor: backgroundColors[activeCard % backgroundColors.length],
         }}
-        className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md sm:p-10"
+        className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md sm:p-10 sm:pt-0"
         ref={ref}
         style={{
           scrollbarWidth: 'thin',
@@ -93,15 +93,15 @@ export const StickyScroll = ({
       <div className="div relative flex items-start px-2">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-10">
+            <div key={item.title + index} className="my-10 pt-20">
               <motion.h2
                 initial={{
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: activeCard === index ? 1 : 0,
                 }}
-                className="text-2xl font-bold text-kg dark:bg-slate-800"
+                className="text-2xl font-bold text-kg "
               >
                 {item.title}
               </motion.h2>
@@ -110,9 +110,9 @@ export const StickyScroll = ({
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: activeCard === index ? 1 : 0,
                 }}
-                className="text-kg text-slate-800 max-w-sm mt-10 dark:text-slate-200 dark:bg-slate-800 bg-white"
+                className="text-kg text-slate-800 max-w-sm mt-10 dark:text-slate-200 "
               >
                 {item.description}
               </motion.p>
@@ -121,7 +121,7 @@ export const StickyScroll = ({
                     opacity: 0,
                   }}
                   animate={{
-                    opacity: activeCard === index ? 1 : 0.3,
+                    opacity: activeCard === index ? 1 : 0,
                   }}
                   className="flex gap-2">
                 { item.techStack?.map((tech) => (
