@@ -19,7 +19,11 @@ export default function Body(){
                 </h1>
                 <div className="sm:px-32 font-roboto flex flex-row justify-center items-center gap-5">
                     <WobbleCardDemo/>   
-                </div>  
+                </div> 
+                <div className="sm:px-32 mt-5 flex flex-col sm:flex-row justify-center items-center gap-5">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/glYXquWu_dU?si=3C-5nOj4s6YCNSI0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+    
+                </div> 
                     <div className="text-center backdrop-blur-lg  text-slate-700 text-xl dark:text-slate-100">
                         I&apos;m actively seeking opportunities in Software Development, Full-Stack, Backend, and DevOps roles.
                     </div>
@@ -28,6 +32,7 @@ export default function Body(){
                     </div>
                 
                 <div className="sm:px-32 mt-5 flex fles-row w-full sm:w-fit justify-center items-center">
+
                     <div onClick={()=>setflag(true)} className={"backdrop-blur-sm font-bold text-4xl w-fit cursor-pointer " + (!flag? " text-slate-500" : " text-black dark:text-white")}>Tech Stack</div>
                     <div onClick={()=>setflag(false)} className={"backdrop-blur-sm font-bold text-4xl w-fit cursor-pointer " + (flag? " text-slate-500" : " text-black dark:text-white")}>Tools</div>
                 </div>
