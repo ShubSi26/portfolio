@@ -5,8 +5,6 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 interface TimelineEntry {
   title: string;
@@ -17,7 +15,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
-  const router = useRouter();
 
   useEffect(() => {
     if (ref.current) {
@@ -39,32 +36,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10 z-40"
       ref={containerRef}
     >
-      <div className="relative max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        {/* Background image */}
-        <Image
-          src="/images/githubStat.png"
-          alt="background stat"
-          width={1000}
-          height={100}
-          className="absolute left-0 top-1/2 transform w-full -translate-y-1/2  pointer-events-none select-none hidden md:block"
-          style={{
-            maskImage: 'linear-gradient(to left, black 30%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 100%)',
-          }}
-        />
-
-        {/* Foreground content */}
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl relative">
-          My All Projects
-        </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm relative">
-          This include all of my work done, learning and projects undertaken in last 2 years.
-        </p>
-        <div onClick={() => router.back()} className="hover:cursor-pointer z-40 font-bold text-2xl">
-          Go Back
-      </div>
-      </div>
-
+      
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div

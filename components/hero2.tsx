@@ -64,7 +64,7 @@ function Links({handleScroll,handleScroll2} : {handleScroll:()=>void,handleScrol
                     <Link href={"/contact"}>Contacts</Link>
                 </div>
                 <div onClick={handleScroll} className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer ">
-                    Reasume/CV
+                    <Link href={"https://drive.google.com/file/d/1Lr-ESCPNw12XgXVlTrcyegIDsc8jyzT2/view?usp=drive_link"}>Reasume/CV</Link>
                 </div>
             </div>
             <Darkmode/>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { WobbleCard } from "./wobble-card";
+import Link from "next/link";
 
 export function WobbleCardDemo() {
   return (
@@ -27,19 +28,21 @@ export function WobbleCardDemo() {
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          Certification
-        </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          Completed certifications in Cloud Computing from NPTEL and Getting Started with Compute from AWS Educate.
-        </p>
+        <Link href={"/certifications"} className="relative w-full h-full flex flex-col justify-center items-center">
+          <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Certification
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            Completed certifications in Cloud Computing from NPTEL and Getting Started with Compute from AWS Educate.
+          </p>
+        </Link>
         <img
-          src="https://www.careerguide.com/career/wp-content/uploads/2023/09/nptel-logo-1024x199.png"
-          width={300}
-          height={300}
-          alt="linear demo image"
-          className="absolute filter  object-contain rounded-2xl"
-        />
+            src="https://www.careerguide.com/career/wp-content/uploads/2023/09/nptel-logo-1024x199.png"
+            width={300}
+            height={300}
+            alt="linear demo image"
+            className="absolute filter  object-contain rounded-2xl"
+          />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
