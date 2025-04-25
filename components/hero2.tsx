@@ -63,7 +63,7 @@ function Links({handleScroll,handleScroll2} : {handleScroll:()=>void,handleScrol
                 <div className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer ">
                     <Link href={"/contact"}>Contacts</Link>
                 </div>
-                <div onClick={handleScroll} className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer ">
+                <div className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer ">
                     <Link href={"https://drive.google.com/file/d/1Lr-ESCPNw12XgXVlTrcyegIDsc8jyzT2/view?usp=drive_link"}>Reasume/CV</Link>
                 </div>
             </div>
