@@ -120,7 +120,7 @@ export default function TimelineDemo() {
         title: "Aug 2023",
         content: (
           <div>
-              <h2 className="text-xl font-bold"> SFR NOG - Lead Volunteer</h2>
+              <h2 className="text-xl font-bold"> SRF NGO - Lead Volunteer</h2>
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
                 Served as a lead volunteer for the SFR NOG event, orgnised child rights awareness programs and activities. Coordinated with team members to ensure smooth event execution and participant engagement.
             </p>
