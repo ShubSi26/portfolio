@@ -90,10 +90,10 @@ export const StickyScroll = ({
             background-color: #333; /* Darker on hover */
           }
         `}</style>
-      <div className="div relative flex items-start px-2">
-        <div className="max-w-2xl">
+      <div className="div relative flex items-start sm:px-2">
+        <div className="">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-10 pt-20">
+            <div key={item.title + index} className="sm:my-10 pt-20">
               <motion.h2
                 initial={{
                   opacity: 0,

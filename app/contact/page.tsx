@@ -5,7 +5,7 @@ import { ShootingStars } from "@/components/shootingStars";
 import { StarsBackground } from "@/components/starBackground";
 
 export default function ContactPage() {
-  return (<div className="h-screen w-screen flex flex-row justify-center items-center ">
+  return (<div className="h-screen w-screen flex sm:flex-row flex-col justify-center items-center ">
     <Contact />
     <GlobeDemo />
     <ShootingStars />

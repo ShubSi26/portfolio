@@ -20,10 +20,6 @@ export default function Body(){
                 <div className="sm:px-32 font-roboto flex flex-row justify-center items-center gap-5">
                     <WobbleCardDemo/>   
                 </div> 
-                <div className="sm:px-32 mt-5 flex flex-col sm:flex-row justify-center items-center gap-5">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/glYXquWu_dU?si=3C-5nOj4s6YCNSI0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-    
-                </div> 
                     <div className="text-center backdrop-blur-lg  text-slate-700 text-xl dark:text-slate-100">
                         I&apos;m actively seeking opportunities in Software Development, Full-Stack, Backend, and DevOps roles.
                     </div>
@@ -96,7 +92,7 @@ function Icons({ src, text }: { src: string, text: string }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex flex-col sm:flex-row hover:border-b-1 hover:rounded-none justify-center items-center gap-2 backdrop-blur-lg p-2 rounded dark:text-slate-200"
+        className="flex flex-col sm:flex-row hover:border-b-1 hover:rounded-none justify-center items-center gap-2 p-2 rounded dark:text-slate-200"
       >
         <img
           src={"https://skillicons.dev/icons?i=" + src}

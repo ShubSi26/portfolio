@@ -12,7 +12,7 @@ export function Footr() {
         <FlipWords words={words} duration={1000}/>
         <div>Together</div>
       </div>
-      <div className=" text-2xl text-center font-normal w-2/3 p-2">
+      <div className=" sm:text-2xl text-center font-normal w-2/3 sm:p-2 p-1">
         I&apos;m always excited to collaborate on new projects. Feel free to reach out if you have any questions or want to chat!
       </div>
         <Link href={"/contact"}>

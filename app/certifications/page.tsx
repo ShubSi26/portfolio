@@ -17,13 +17,13 @@ export default function TimelineDemo() {
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Learned about AWS services, including EC2, S3, and Lambda, and how to deploy applications on AWS infrastructure. Gained hands-on experience with AWS management console and CLI.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             <img
               src="/images/aws.jpg"
               alt="startup template"
               width={500}
               height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+              className=""
             />
             
           </div>
@@ -38,13 +38,13 @@ export default function TimelineDemo() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
                 Learned about cloud computing concepts, including virtualization, cloud service models (IaaS, PaaS, SaaS), and cloud deployment models (public, private, hybrid). Gained hands-on experience with AWS and Azure platforms.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <Image
                 src="/images/nptel.jpg"
                 alt="startup template"
                 width={500}
                 height={500}
-                className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                className=""
               />
               
             </div>
@@ -59,13 +59,13 @@ export default function TimelineDemo() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
                 Completed a 1.5 month DSA tranning program at HitsBullseye, covering data structures and algorithms. Gained hands-on experience with problem-solving techniques and coding challenges.
             </p>    
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <Image
                 src="/images/hitsb.jpg"
                 alt="startup template"
                 width={500}
                 height={500}
-                className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                className=""
               />
               
   
@@ -81,13 +81,13 @@ export default function TimelineDemo() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Completed the MongoDB Developer certification, demonstrating proficiency in MongoDB database design, querying, and data modeling. Gained hands-on experience with MongoDB Atlas and aggregation framework.
             </p>    
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <Image
                 src="/images/mongodb.jpg"
                 alt="startup template"
                 width={500}
                 height={500}
-                className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                className=""
               />
               
   
@@ -103,13 +103,13 @@ export default function TimelineDemo() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
                 Completed the Ddevops Foundation course, covering DevOps principles, CI/CD pipelines, and containerization using Docker and Kubernetes. Gained hands-on experience with Git, Jenkins, and cloud platforms.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <Image
                 src="/images/devops.jpg"
                 alt="startup template"
                 width={500}
                 height={500}
-                className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                className=""
               />
              
             </div>
@@ -124,20 +124,20 @@ export default function TimelineDemo() {
             <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
                 Served as a lead volunteer for the SFR NOG event, orgnised child rights awareness programs and activities. Coordinated with team members to ensure smooth event execution and participant engagement.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               <Image
                 src="/images/srf1.jpeg"
                 alt="startup template"
                 width={500}
                 height={500}
-                className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                className=""
               />
               <Image
                 src="/images/srf2.jpeg"
                 alt="startup template"
                 width={500}
                 height={500}
-                className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
+                className=""
               />
              
             </div>

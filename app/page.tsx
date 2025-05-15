@@ -35,7 +35,7 @@ export default function Home() {
         <div ref = {targetRef} className="min-h-fit transition-all duration-500 ease-in-out pt-5 h-auto">
           <Body/>
         </div>
-        <div ref={targetRef2} className="min-h-fit transition-all duration-500 ease-in-out  pt-5 h-auto">
+        <div ref={targetRef2} className="min-h-fit transition-all duration-500 ease-in-out  sm:pt-5 h-auto">
           <Projects/>
         </div>
         <div>

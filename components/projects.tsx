@@ -183,7 +183,7 @@ export function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="p-10 scroll-container">
+      className="sm:p-10 p-5 scroll-container">
       <StickyScroll content={content} />
     </motion.div>
   </>);

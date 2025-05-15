@@ -59,7 +59,7 @@ export function WobbleCardDemo() {
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px] bg-blue-900"
         className=" w-max "
       >
-        <div className="w-max">
+        <div className="w-max h-96 sm:h-full ">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
             Achievements
           </h2>

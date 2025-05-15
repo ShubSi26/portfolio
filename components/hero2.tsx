@@ -48,9 +48,9 @@ function Links({handleScroll,handleScroll2} : {handleScroll:()=>void,handleScrol
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: "fit-content", opacity: 1 }}
         transition={{ delay: 2.0, duration: 1 }}
-        className="w-fit flex flex-col justify-center items-center"
+        className="sm:w-fit flex flex-col justify-center items-center flex-wrap"
         >
-            <div className="w-fit p-2 rounded-2xl flex flex-row items-center justify-center gap-7 whitespace-nowrap text-2xl ">
+            <div className="sm:w-fit p-2 flex-wrap rounded-2xl flex flex-row items-center justify-center gap-7 whitespace-nowrap text-2xl ">
                 <div onClick={handleScroll} className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer">
                     About Me
                 </div>
@@ -62,9 +62,6 @@ function Links({handleScroll,handleScroll2} : {handleScroll:()=>void,handleScrol
                 </div>
                 <div className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer ">
                     <Link href={"/contact"}>Contacts</Link>
-                </div>
-                <div className="hover:border-b-2 hover:scale-105 transition-all cursor-pointer ">
-                    <Link href={"https://drive.google.com/file/d/1Lr-ESCPNw12XgXVlTrcyegIDsc8jyzT2/view?usp=drive_link"}>Reasume/CV</Link>
                 </div>
             </div>
             <Darkmode/>

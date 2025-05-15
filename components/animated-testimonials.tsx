@@ -39,8 +39,8 @@ export const AnimatedTestimonials = ({
   };
   return (
     <div className="mx-auto max-w-sm font-sans antialiased md:max-w-4xl">
-      <div className="relative grid grid-cols-1 gap-5 md:grid-cols-2">
-      <div className="flex flex-col justify-between py-4">
+      <div className="relative sm:grid flex flex-col justify-center items-center sm:grid-cols-1 sm:gap-5 md:grid-cols-2">
+      <div className="flex flex-col justify-between py-2 sm:py-4">
           <motion.div
             key={active}
             initial={{
