@@ -75,7 +75,7 @@ export default function TimelineDemo() {
                         />
                 </div>
                 <h1 className="font-bold text-2xl">Gihub Link</h1>
-                <Link href={"https://github.com/ShubSi26/AYUSH-Startup-Portal"} target="_blank">
+                <Link href={"https://github.com/ShubSi26/Farm2Fabric-Kotlin_Project"} target="_blank">
                     <Image
                     src={'/images/github.png'}
                     width={40}
