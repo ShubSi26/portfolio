@@ -14,10 +14,10 @@ export function WobbleCardDemo() {
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Passionate Software Developer
+            Passionate Devops Engineer & Software Developer
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-          I&apos;m a passionate Software Developer with experience in the MERN stack, Docker, Kubernetes, Linux, Cloud (Azure, AWS), and DevOps. Currently in my third year of B.Tech in Computer Science and Engineering
+          I&apos;m a passionate Software Developer with experience in the MERN stack, Docker, Kubernetes, Linux, Cloud (Azure, AWS), and DevOps. Currently in my fourth year of B.Tech in Computer Science and Engineering
           </p>
         </div>
         <img

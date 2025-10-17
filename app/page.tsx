@@ -6,6 +6,7 @@ import {Projects} from "@/components/projects";
 import {CardHoverEffectDemo} from "@/components/findme";
 import {Footr} from "@/components/footr";
 import Randomlines from "@/components/randomlines";
+import Experience from "@/components/Experience";
 import { useRef } from "react";
 import Head from "next/head";
 
@@ -37,6 +38,9 @@ export default function Home() {
         </div>
         <div ref={targetRef2} className="min-h-fit transition-all duration-500 ease-in-out  sm:pt-5 h-auto">
           <Projects/>
+        </div>
+        <div>
+          <Experience/>
         </div>
         <div>
           <Education/>

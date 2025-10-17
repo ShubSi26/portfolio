@@ -37,7 +37,7 @@ function Text() {
       >
         <h1 className="text-5xl font-bold whitespace-nowrap  text-left">👋Hello, I&apos;m</h1>
         <h1 className="text-5xl font-bold whitespace-nowrap text-left"> Shubham Singh</h1>
-        <h2 className="text-3xl font-medium whitespace-nowrap text-left ">Web & Android Developer</h2>
+        <h2 className="text-3xl font-medium whitespace-nowrap text-left ">Devops Engineer | Acko</h2>
       </motion.div>
     );
   }
