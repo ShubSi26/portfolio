@@ -25,7 +25,7 @@ const content = [
                 <Show src={"/images/github.png"} text="Source Code"/>
             </div>
           </Link>
-          <Link href={"https://connectify.devshubh.live"} target="_blank">
+          <Link href={"https://connectify.shubhx.tech"} target="_blank">
             <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
                 <Show src={"/images/web.png"} text="Live Demo"/>
             </div>
@@ -35,7 +35,7 @@ const content = [
           <Link href = "https://github.com/ShubSi26/connectify" target="_blank">
             <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
           </Link>
-          <Link href={"https://connectify.devshubh.live"} target="_blank">
+          <Link href={"https://connectify.shubhx.tech"} target="_blank">
             <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
           </Link>
         </div>
@@ -62,7 +62,7 @@ const content = [
                 <Show src={"/images/github.png"} text="Source Code"/>
             </div>
           </Link>
-          <Link href={"https://paynow.devshubh.live"} target="_blank">
+          <Link href={"https://paynow.shubhx.tech"} target="_blank">
             <div className="hidden group-hover:block cursor-pointer transition p-2 border-2 border-slate-400 backdrop-blur-md rounded-3xl">
                 <Show src={"/images/web.png"} text="Live Demo"/>
             </div>
@@ -72,7 +72,7 @@ const content = [
           <Link href = "https://github.com/ShubSi26/Pay-Now" target="_blank">
             <Show src={"/images/github.png"} text="Source Code" className=" bg-white rounded-xl p-1"/>
           </Link>
-          <Link href={"https://paynow.devshubh.live"} target="_blank">
+          <Link href={"https://paynow.shubhx.tech"} target="_blank">
             <Show src={"/images/web.png"} text="Live Demo" className=" bg-white rounded-xl p-1 "/>
           </Link>
         </div>
